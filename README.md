@@ -1,1 +1,2 @@
 # DSC180B-B03
+In order to find the Vapor Pressure Deficit (VPD) values we needed to find the Relative Humidity and the Temperature. Then using these values we will be able to calculate the VPD. The code we have so far does not calculate the VPD yet, but this calculation will be done in the near future and then we will be able to use our previous models on the vpd data to make predictions of where wildfires will be most likely to occur.
