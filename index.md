@@ -21,7 +21,44 @@ After we compute VPD, we create three machine learning models to test which mode
 
 ## Results
 
-To evaluate our models, we compute the normalized root mean squared error for each of the emulator's predictions.
+To evaluate our models, we compute the normalized root mean squared error(NRMSE) for each of the emulator's predictions. A comparison of the NRMSE for our different models is shown in the table below:
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>DataFrame</th>
+      <th>Spatial</th>
+      <th>Global</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Linear</strong></td>
+      <td>0.036</td>
+      <td>0.012</td>
+      <td>0.096%</td>
+    </tr>
+    <tr>
+      <td><strong>CNN</strong></td>
+      <td>TO DO</td>
+      <td>TO DO</td>
+      <td>TO DO</td>
+    </tr>
+    <tr>
+      <td><strong>Random Forest</strong></td>
+      <td>TO DO</td>
+      <td>TO DO</td>
+      <td>TO DO</td>
+    </tr>
+    <tr>
+      <td><strong>Gaussian Process</strong></td>
+      <td>TO DO</td>
+      <td>TO DO</td>
+      <td>TO DO</td>
+    </tr>
+  </tbody>
+</table>
 
 <img alt="Baseline Results" src="figures/linear_results.png">
 
