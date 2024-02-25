@@ -21,6 +21,11 @@ After we compute VPD, we create three machine learning models to test which mode
 
 ## Results
 
+To evaluate our models, we compute the normalized root mean squared error for each of the emulator's predictions.
+
+<img alt="Baseline Results" src="figures/lienar_results.png">
+
+<img alt="Model comparison" src="figures/linear_predictions.png">
 
 
 ## Conclusion
