@@ -10,8 +10,8 @@
 
 ## Methods
 We first compute VPD from the relative humidity and temperature obtained from the CESM2 dataset. To compute VPD, we first compute the saturation vapor pressure (SVP) from temperature in Celsius, then use the relative humidity (RH) to compute the VPD. The formulas to compute VPD are listed below:
-<p style="text-align: center;">$SVP=0.6112\exp(\frac{17.76\times{T}}{T+243.5})$</p>
-<p style="text-align: center;">$VPD=(1 - \frac{RH}{100})\times SVP$</p>
+$$SVP=0.6112\exp(\frac{17.76\times{T}}{T+243.5})$$
+$$VPD=(1 - \frac{RH}{100})\times SVP$$
 
 After we compute VPD, we create three machine learning models to test which model fits VPD the best, and create a linear model to gauge the performance of the three machine learning models. Our models use the greenhouse gas and aerosol emissions from several different climate scenarios to make predictions of global VPD up to the year 2100. To test our models, we have them predict the VPD on a scenario of moderate climate change, and compare the predictions to those made by a large-scale Earth System Model. However, our model is able to predict VPD on other climate change scenarios as well. The four models we create are listed below in more detail:
 1. Linear Model: In this model, we predict VPD assuming it has a linear relationship with global mean temperature. This is our baseline model to allow us to evaluate the performance of our machine learning models.
