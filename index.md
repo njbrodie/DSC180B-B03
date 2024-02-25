@@ -15,9 +15,9 @@ We first compute VPD from the relative humidity and temperature obtained from th
 
 After we compute VPD, we create three machine learning models to test which model fits VPD the best, and create a linear model to gauge the performance of the three machine learning models. Our models use the greenhouse gas and aerosol emissions from several different climate scenarios to make predictions of global VPD up to the year 2100. To test our models, we have them predict the VPD on a scenario of moderate climate change, and compare the predictions to those made by a large-scale Earth System Model. However, our model is able to predict VPD on other climate change scenarios as well. The four models we create are listed below in more detail:
 1. Linear Model: In this model, we predict VPD assuming it has a linear relationship with global mean temperature. This is our baseline model to allow us to evaluate the performance of our machine learning models.
-2. Gaussian Process: We perform dimensionality reduction the aerosol emissions data. We then fit a GP model with a Matern-1.5 kernel onto the data.
-3. Random Forest: We use the same dimensionality reduced data as the Gaussian Process to fit a random forest. This model is the most interpretable, but can struggle with generalizing outside the training data.
-4. Convolutional Neural Network: We fit a CNN-LSTM trained in 10 year chunks using ReLU activation functions. This type of model is especially suited for our temporospatial data.
+2. Gaussian Process: We perform dimensionality reduction on the aerosol emissions data and use the first five principal components. We then fit a GP model over the emissions data using a Matern-1.5 kernel.
+3. Random Forest: We use the same dimensionality reduced emissions data as the Gaussian Process to fit a random forest to predict VPD. This model is the most interpretable of the machine learning models, but can struggle with generalizing outside the training data.
+4. Convolutional Neural Network: We fit a CNN-LSTM trained in 10 year time steps using 3x3 filters, and ReLU activation functions. For the LSTM layer, we also use ReLU activation and learn weights from the pooling layer using 25 memory cells. This type of model is especially suited in fitting onto our spatiotemporal emission data.
 
 ## Results
 
