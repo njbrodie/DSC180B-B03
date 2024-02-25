@@ -9,7 +9,7 @@
 
 
 ## Methods
-We first compute VPD from the relative humidity and temperature obtained from the CESM2 dataset. To compute VPD, we first compute the saturation vapor pressure (SVP) from temperature in Celsius, then use the relative humidity (rh) to compute the VPD. The formulas to compute VPD are listed below:
+We first compute VPD from the relative humidity and temperature obtained from the CESM2 dataset. To compute VPD, we first compute the saturation vapor pressure (SVP) from temperature in Celsius, then use the relative humidity (RH) to compute the VPD. The formulas to compute VPD are listed below:
 <p style="text-align: center;">$SVP=0.6112\exp(\frac{17.76\times{T}}{T+243.5})$</p>
 <p style="text-align: center;">$VPD=(1 - \frac{RH}{100})\times SVP$</p>
 
