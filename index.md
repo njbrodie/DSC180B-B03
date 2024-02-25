@@ -60,7 +60,11 @@ To evaluate our models, we compute the normalized root mean squared error(NRMSE)
   </tbody>
 </table>
 
+We plotted the VPD predictions of the linear model alongside the ssp245 VPD projections near San Diego.
+
 <img alt="Baseline Results" src="figures/linear_results.png">
+
+
 
 <img alt="Model comparison" src="figures/linear_comparison.png">
 
