@@ -8,8 +8,16 @@
   Although previous work has provided a strong framework for making wildfire predictions based on existing predictions of key variables for a certain climate pathway, our model attempts to make predictions based solely on the emissions of key climate change pollutants: CO2, SO2, CH4, and BC. Our project will be following a similar approach to our mentor's ClimateBench paper, which uses machine learning models to predict impacts of global warming (Watson-Parris et al., 2022). We will be utilizing the CESM2 dataset because it has complete data with the variables necessary to calculate Vapor Pressure Deficit, which is the driving variable for our models.
 
 
+## Methods
+We first compute VPD from the relative humidity and temperature obtained from the CESM2 dataset. To compute VPD, we first compute the saturation vapor pressure (SVP) from temperature in Celsius, then use the relative humidity (rh) to compute the VPD. The formulas to compute VPD are listed below:
+<p style="text-align: center;">$SVP=0.6112\exp(\frac{17.76\times{T}}{T+243.5})$</p>
+<p style="text-align: center;">$VPD=(1 - \frac{RH}{100})\times SVP$</p>
 
-
+After we compute VPD, we create three machine learning models to test which model fits VPD the best, and create a linear model to gauge the performance of the three machine learning models. Our models use the greenhouse gas and aerosol emissions from several different climate scenarios to make predictions of global VPD up to the year 2100. To test our models, we have them predict the VPD on a scenario of moderate climate change, and compare the predictions to those made by a large-scale Earth System Model. However, our model is able to predict VPD on other climate change scenarios as well. The four models we create are listed below in more detail:
+1. Linear Model: In this model, we predict VPD assuming it has a linear relationship with global mean temperature. This is our baseline model to allow us to evaluate the performance of our machine learning models.
+2. Gaussian Process: We perform dimensionality reduction the aerosol emissions data. We then fit a GP model with a Matern-1.5 kernel onto the data.
+3. Random Forest: We use the same dimensionality reduced data as the Gaussian Process to fit a random forest. This model is the most interpretable, but can struggle with generalizing outside the training data.
+4. Convolutional Neural Network: We fit a CNN-LSTM trained in 10 year chunks using ReLU activation functions. This type of model is especially suited for our temporospatial data.
 
 ## Results
 
