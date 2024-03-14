@@ -8,9 +8,6 @@ from eofs.xarray import Eof
 
 import random
 
-len_historical = 165
-slider = 10
-
 def normalize(data, var, meanstd_dict):
     mean = meanstd_dict[var][0]
     std = meanstd_dict[var][1]
