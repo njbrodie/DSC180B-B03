@@ -123,8 +123,8 @@ if __name__ == "__main__":
     predictions = train_CNN(scenarios)
     rmses = get_rmse(test_sim, predictions)
     print("Global: " + str(rmses[0]))
-    print(" Spatial: " + str(rmses[1]))
-    print(" Total: " + str(rmses[2]))
+    print("Spatial: " + str(rmses[1]))
+    print("Total: " + str(rmses[2]))
 
     
 
