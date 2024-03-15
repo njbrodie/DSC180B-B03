@@ -22,9 +22,7 @@ def get_rmse(test_scenario, preds):
     hursTest = xr.open_dataset('vpd_data/hurs_' + test_scenario + '.nc')
     tasTest = xr.open_dataset('vpd_data/tas_' + test_scenario + '.nc')
     vpdTest = get_vpd(hursTest.hurs, tasTest.tas).to_dataset(name='vpd')
-    Y_Test = vpdTest.sel(time=slice('2024', None))
-
-    Y_test = create_predictdand_data(test_scenario)
+    Y_test = vpdTest.sel(time=slice('2024', None))
     vpd_truth = Y_test["vpd"]
 
     return [get_nrmse_spatial(vpd_truth, preds['vpd']), get_nrmse_global(vpd_truth, preds['vpd']), get_nrmse(vpd_truth, preds['vpd'])]
@@ -81,7 +79,7 @@ def train_CNN(scenarios):
     cnn_model.add(TimeDistributed(Conv2D(20, (3, 3), padding='same', activation='relu'), input_shape=(slider, 96, 144, 4)))
     cnn_model.add(TimeDistributed(AveragePooling2D(2)))
     cnn_model.add(TimeDistributed(GlobalAveragePooling2D()))
-    cnn_model.add(LSTM(25, activation='relu'))
+    cnn_model.add(LSTM(35, activation='relu'))
     cnn_model.add(Dense(1*96*144))
     cnn_model.add(Activation('linear'))
     cnn_model.add(Reshape((1, 96, 144)))
@@ -93,7 +91,7 @@ def train_CNN(scenarios):
                      use_multiprocessing=True, 
                      #workers=5,
                      batch_size=16,
-                     epochs=27,
+                     epochs=30,
                      verbose=1)
 
     X_test = xr.open_dataset('train_val/inputs_ssp245.nc')
@@ -109,7 +107,7 @@ def train_CNN(scenarios):
     # reshape to xarray 
     predictions = predictions.reshape(predictions.shape[0], predictions.shape[2], predictions.shape[3])
     predictions = xr.DataArray(predictions, dims=['time', 'lat', 'lon'], coords=[X_test.time.data[slider-1:], X_test.latitude.data, X_test.longitude.data])
-    predictions = predictions.transpose('lat', 'lon', 'time').sel(time=slice(2015, 2101)).to_dataset(name=var_to_predict)
+    predictions = predictions.transpose('lat', 'lon', 'time').sel(time=slice(2015, None)).to_dataset(name=var_to_predict)
     
     predictions.to_netcdf('ssp245_predict_vpd.nc'.format(var_to_predict), 'w')
 
@@ -118,7 +116,7 @@ def train_CNN(scenarios):
 
 
 if __name__ == "__main__":
-    scenarios = [sys.argv[1], sys.argv[2], sys.argv[3]]
+    scenarios = [sys.argv[i] for i in range(1, len(sys.argv))]
     test_sim = 'ssp245'
     predictions = train_CNN(scenarios)
     rmses = get_rmse(test_sim, predictions)

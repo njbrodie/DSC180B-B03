@@ -8,6 +8,9 @@ from eofs.xarray import Eof
 
 import random
 
+len_historical = 165
+slider = 10
+
 def normalize(data, var, meanstd_dict):
     mean = meanstd_dict[var][0]
     std = meanstd_dict[var][1]
@@ -83,5 +86,5 @@ def create_predictdand_data(data_sets):
     
     Y = tas_y.merge(hurs_y)
     vpd = get_vpd(hurs_y['hurs'],tas_y['tas'])
-    Y = Y.assign(vpd=vpd/1000)
+    Y = Y.assign(vpd=vpd)
     return Y
