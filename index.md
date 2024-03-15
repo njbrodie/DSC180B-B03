@@ -3,7 +3,7 @@ By Nathan Brodie, Kai Morita, and Benjamin Xue
 
 Mentored by Professor Duncan Watson-Parris
 
-Poster: 
+[Code](https://github.com/njbrodie/DSC180B-B03)
 
 Report: 
 
