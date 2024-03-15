@@ -51,7 +51,7 @@ To evaluate our models, we compute the normalized root mean squared error(NRMSE)
       <td><strong>CNN</strong></td>
       <td>0.058</td>
       <td>0.019</td>
-      <td>0.158</td>
+      <td>0.154</td>
     </tr>
     <tr>
       <td><strong>Random Forest</strong></td>
