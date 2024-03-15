@@ -1,5 +1,6 @@
 # DSC180B-B03
-In order to find the Vapor Pressure Deficit (VPD) values we needed to find the Relative Humidity and the Temperature. Then using these values we will be able to calculate the VPD. Additionally, we plan to use the Relative Humidity and Temperature data from near surface readings, but this change has not been implemented into the code yet, but it will be soon. The code we have so far does not calculate the VPD yet, but this calculation will be done in the near future and then we will be able to use our previous models on the vpd data to make predictions of where wildfires will be most likely to occur. The models we have included are from our Quarter 1 project, but once we calculate the VPD we will use these models to make predictions on VPD and where wildfires are most likely to occur.
+How to run the code:
+For the GP model it is necessary to run the GP_vpd_preprocess.ipynb before running the GP_vpd.ipynb notebook. The preprocessing file will create the necessary data files that will be used to train and test the GP model.
 
 Here is a link to our website: https://njbrodie.github.io/DSC180B-B03/
 
