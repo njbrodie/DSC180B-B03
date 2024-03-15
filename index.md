@@ -79,21 +79,27 @@ To improve the real-world implication of our model we could find where trees and
 ## Works Referenced
 Bolton, David. 1980. “The Computation of Equivalent Potential Temperature.” Monthly
   Weather Review 108(7): 1046 – 1053.
+  
 Buch, J., A. P. Williams, C. S. Juang, W. D. Hansen, and P. Gentine. 2023. “SMLFire1.0:
   a stochastic machine learning (SML) model for wildfire activity in the western United
   States.” Geoscientific Model Development 16(12): 3407–3433.
+  
 Gallo, Eden J. M. Dieppois B. Drobyshev I. Fulé P. Z.-San-Miguel-Ayanz J., C., and
   M. Blackett. 2023. “Evaluation of CMIP6 model performances in simulating fire weather
   spatiotemporal variability on global and regional scales.” Geoscientific Model Development
   16.
+  
 Rodrigues, Marcos, Víctor Resco de Dios, Ângelo Sil, Àngel Cunill Camprubí, and
   Paulo M. Fernandes. 2024. “VPD-based models of dead fine fuel moisture provide best
   estimates in a global dataset.” Agricultural and Forest Meteorology 346, p. 109868.
+  
 Schonlau, Matthias, and Rosie Yuyan Zou. 2020. “The random forest algorithm for sta-
   tistical learning.” The Stata Journal 20(1): 3–29.
+  
 Watson-Parris, Rao Y. Olivié D. Seland Ø. Nowack P. Camps-Valls-G.-et al., D. 2022.
   9 “ClimateBench v1.0: A benchmark for data-driven climate projections.” Journal of Advances 
   in Modeling Earth Systems 14.
+  
 Yu, Mao J. Wullschleger S.D. et al., Y. 2022. “Machine learning–based observation-
   constrained projections reveal elevated global socioeconomic risks from wildfire.” Nature
-  Communications 13. [Link]
+  Communications 13.
