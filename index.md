@@ -61,15 +61,16 @@ To evaluate our models, we compute the normalized root mean squared error(NRMSE)
   </tbody>
 </table>
 
-We plotted the VPD predictions of the linear model alongside the ssp245 VPD projections near San Diego.
-
-<img alt="Baseline Results" src="figures/linear_results.png">
-
-
+The average of the vapor pressure deficit predictions was taken over
+the years 2080-2100 and compared to simulated values for vapor pressure deficit. The
+difference between these values was plotted for each of the models below.
 
 <img alt="Linear Model Predictions" src="figures/linear.pdf">
 <img alt="Random Forest Model Predictions" src="figures/Random_Forest.pdf">
 <img alt="Gaussian Process Model Predictions" src="figures/gpDiff.pdf">
+
+We plotted the VPD predictions of the linear model alongside the ssp245 VPD projections near San Diego.
+<img alt="Baseline Results" src="figures/linear_results.png">
 
 
 ## Conclusion
