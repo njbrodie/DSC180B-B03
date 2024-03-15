@@ -67,7 +67,9 @@ We plotted the VPD predictions of the linear model alongside the ssp245 VPD proj
 
 
 
-<img alt="Model comparison" src="figures/linear_comparison.png">
+<img alt="Linear Model Predictions" src="figures/linear.pdf">
+<img alt="Random Forest Model Predictions" src="figures/Random_Forest.pdf">
+<img alt="Gaussian Process Model Predictions" src="figures/gpDiff.pdf">
 
 
 ## Conclusion
