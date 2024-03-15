@@ -61,9 +61,7 @@ To evaluate our models, we compute the normalized root mean squared error(NRMSE)
   </tbody>
 </table>
 
-The average of the vapor pressure deficit predictions was taken over
-the years 2080-2100 and compared to simulated values for vapor pressure deficit. The
-difference between these values was plotted for each of the models below.
+The average of the vapor pressure deficit predictions was taken over the years 2080-2100 and compared to simulated values for vapor pressure deficit. The difference between these values was plotted for each of the models below.
 
 <img alt="Linear Model Predictions" src="figures/Linear.pdf">
 <img alt="Random Forest Model Predictions" src="figures/Random_Forest.pdf">
@@ -73,4 +71,8 @@ We plotted the VPD predictions of the linear model alongside the ssp245 VPD proj
 <img alt="Baseline Results" src="figures/linear_results.png">
 
 
-## Conclusion
+## Discussion and Future Steps
+A possible explanation for why the linear model performs so well is because of the relationship between temperature and VPD. The linear model in Watson-Parris (2022) outperforms the machine learning models when predicting temperature. If we assume relative humidity stays fairly consistent over time, then we can view VPD as a function of saturation vapor pressure (SVP), which itself is a function of temperature. We show in (the appendix) that the derivative of SVP with respect to temperature is quite small, which means that when we are looking at small changes in temperature, the relationship between VPD and temperature is mostly linear. Thus, we conclude that our linear model for VPD is likely performing around as strongly as the linear model in Watson-Parris (2022) for temperature.
+
+To improve the real-world implication of our model we could find where trees and other possible flammable plants are prevalent on Earth. Combining our VPD data with this will allow us to predict where wildfires will occur more accurately. This would also enable our models to look at data more specifically targeted to the areas in which we are interested in the VPD predictions. An additional approach to improving the results of our models would be to remove the data that is over water and only predict the vapor pressure deficit on the area over land. This would make our models’ predictions more focused on the locations where wildfires can actually occur. It would also reduce the chance that our models are biased towards predictions of VPD over the ocean. This could occur because the majority of the planet is covered by water. Removing the data over the ocean could result in results that favor our machine learning models over the linear model because there is greater variance in the VPD over land than over the oceans
+
