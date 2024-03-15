@@ -7,7 +7,7 @@ Mentored by Professor Duncan Watson-Parris
 
 [Report](src/report.pdf)
 
-[Poster](src/B03-2.pdf)
+[Poster](DSC_180B_Poster-3.pdf)
 
 ## Introduction
 
