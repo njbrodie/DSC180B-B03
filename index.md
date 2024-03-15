@@ -27,7 +27,7 @@ To evaluate our models, we compute the normalized root mean squared error(NRMSE)
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: left;">
-      <th>DataFrame</th>
+      <th></th>
       <th>Spatial</th>
       <th>Global</th>
       <th>Total</th>
