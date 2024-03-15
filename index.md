@@ -35,25 +35,25 @@ To evaluate our models, we compute the normalized root mean squared error(NRMSE)
       <td><strong>Linear</strong></td>
       <td>0.036</td>
       <td>0.012</td>
-      <td>0.096%</td>
+      <td>0.096</td>
     </tr>
     <tr>
       <td><strong>CNN</strong></td>
-      <td>TO DO</td>
-      <td>TO DO</td>
-      <td>TO DO</td>
+      <td>0.061</td>
+      <td>0.009</td>
+      <td>0.108</td>
     </tr>
     <tr>
       <td><strong>Random Forest</strong></td>
-      <td>TO DO</td>
-      <td>TO DO</td>
-      <td>TO DO</td>
+      <td>0.051</td>
+      <td>0.019</td>
+      <td>0.144</td>
     </tr>
     <tr>
       <td><strong>Gaussian Process</strong></td>
-      <td>TO DO</td>
-      <td>TO DO</td>
-      <td>TO DO</td>
+      <td>0.044</td>
+      <td>0.013</td>
+      <td>0.11</td>
     </tr>
   </tbody>
 </table>
