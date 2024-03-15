@@ -5,9 +5,9 @@ Mentored by Professor Duncan Watson-Parris
 
 [Code](https://github.com/njbrodie/DSC180B-B03)
 
-[Report]
+[Report](src/report.pdf)
 
-[Poster]
+[Poster](src/B03-2.pdf)
 
 ## Introduction
 
