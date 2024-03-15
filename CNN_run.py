@@ -107,7 +107,7 @@ def train_CNN(scenarios):
     # reshape to xarray 
     predictions = predictions.reshape(predictions.shape[0], predictions.shape[2], predictions.shape[3])
     predictions = xr.DataArray(predictions, dims=['time', 'lat', 'lon'], coords=[X_test.time.data[slider-1:], X_test.latitude.data, X_test.longitude.data])
-    predictions = predictions.transpose('lat', 'lon', 'time').sel(time=slice(2015, None)).to_dataset(name=var_to_predict)
+    predictions = predictions.transpose('time', 'lat', 'lon').sel(time=slice(2015, None)).to_dataset(name=var_to_predict)
     
     predictions.to_netcdf('ssp245_predict_vpd.nc'.format(var_to_predict), 'w')
 
