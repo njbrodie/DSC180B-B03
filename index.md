@@ -76,6 +76,7 @@ The average of the vapor pressure deficit predictions was taken over the years 2
 <img alt="Convolutional Neural Network Model Predictions" src="figures/CNN_diff-1.png">
 
 We plotted the VPD predictions of the linear model alongside the ssp245 VPD projections near San Diego.
+
 <img alt="Baseline Results" src="figures/linear_results.png">
 
 
