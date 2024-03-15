@@ -4,7 +4,9 @@ By Nathan Brodie, Kai Morita, and Benjamin Xue
 Mentored by Professor Duncan Watson-Parris
 
 Poster: 
+
 Report: 
+
 Code: 
 
 ## Introduction
