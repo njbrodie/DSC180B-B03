@@ -6,7 +6,7 @@ All of our models are located within the src/models directory.
 
 For the GP model it is necessary to run the GP_vpd_preprocess.ipynb before running the GP_vpd.ipynb notebook. The preprocessing file will create the necessary data files that will be used to train and test the GP model.
 
-The data needed for to run the linear and random forest models, titled vpd_linear.ipynb and vpd_random_forest.ipynb respectively, can be found in the data folder of this Github, or by using the vpd_preprocess.ipynb notebook if you have access to NCAR. The data must be placed into a folder in your working directory titled vpd_data.
+The data needed for to run the linear and random forest models, titled vpd_linear.ipynb and vpd_random_forest.ipynb respectively, can be found in the directory of this repository titled "data", or by using the vpd_preprocess.ipynb notebook if you have access to NCAR. The data must be placed into a folder in your working directory titled vpd_data.
 
 The CNN model can be trained by using the CNN_run.py file which takes in your desired input simulations(ssp126, ssp370, etc.) separated by a single space. You can use the following example command to run the code: 
 ```bash
